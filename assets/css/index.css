@@ -1,0 +1,67 @@
+/* ── Hero ── */
+.hero { padding: 48px 0 40px; }
+.hero h1 { font-size: 2.4rem; font-weight: 800; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.badge { display: inline-block; background: #1e3a5f; color: #38bdf8; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; border: 1px solid #1d4ed8; margin: 4px; }
+
+/* ── Sections ── */
+.section { margin-bottom: 48px; }
+.section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #1e293b; }
+.section-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.section-title { font-size: 1.4rem; font-weight: 700; color: #f1f5f9; }
+.section-sub { color: #64748b; font-size: 0.85rem; margin-top: 2px; }
+.ic-magento { background: #1e3a5f; }
+.ic-hyva    { background: #2d1b69; }
+.ic-b2b     { background: #2d1a1a; }
+.ic-infra   { background: #1a2d2d; }
+.ic-qa      { background: #1e293b; border: 1px solid #4ade80; }
+.ic-proj    { background: #2a1f0a; }
+
+/* ── Cards ── */
+.card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
+.card h3 { color: #38bdf8; font-size: 1rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.card p, .card li { color: #cbd5e1; font-size: 0.9rem; }
+.card ul, .card ol { padding-left: 20px; }
+.card li { margin-bottom: 6px; }
+
+/* ── Q&A accordion ── */
+.qa { background: #1e293b; border: 1px solid #334155; border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+.qa-q { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.qa-q:hover { background: #263548; }
+.qa-q-text { font-weight: 600; color: #e2e8f0; font-size: 0.95rem; }
+.qa-q-tag { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; flex-shrink: 0; margin-top: 2px; }
+.tag-general   { background: #1e3a5f; color: #38bdf8; border: 1px solid #1d4ed8; }
+.tag-technical { background: #1a2e1a; color: #4ade80; border: 1px solid #166534; }
+.tag-hyva      { background: #2d1b69; color: #a78bfa; border: 1px solid #5b21b6; }
+.tag-b2b       { background: #2d1a1a; color: #fb923c; border: 1px solid #9a3412; }
+.tag-infra     { background: #1a2d2d; color: #2dd4bf; border: 1px solid #0f766e; }
+.qa-arrow { color: #475569; font-size: 12px; flex-shrink: 0; padding-top: 3px; transition: transform 0.2s; }
+.qa.open .qa-arrow { transform: rotate(180deg); }
+.qa-a { display: none; padding: 0 20px 16px; border-top: 1px solid #263548; }
+.qa.open .qa-a { display: block; }
+.qa-a p, .qa-a li { color: #94a3b8; font-size: 0.88rem; margin-top: 8px; }
+.qa-a ul, .qa-a ol { padding-left: 20px; }
+.qa-a li { margin-bottom: 5px; }
+.qa-a strong { color: #cbd5e1; }
+.qa-a .answer-label { color: #4ade80; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 12px; margin-bottom: 4px; }
+
+/* ── TOC grid ── */
+.toc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+@media (max-width: 600px) { .toc-grid { grid-template-columns: 1fr 1fr; } }
+.toc-item { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 12px; text-align: center; text-decoration: none; transition: all 0.2s; }
+.toc-item:hover { border-color: #38bdf8; background: #0c1f3a; }
+.toc-item .toc-icon { font-size: 1.5rem; margin-bottom: 4px; }
+.toc-item .toc-label { color: #94a3b8; font-size: 0.78rem; font-weight: 600; }
+
+/* ── Project badges ── */
+.project-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin: 2px; }
+.pb-sgd { background: #1e3a5f; color: #38bdf8; }
+.pb-gem { background: #1a2e1a; color: #4ade80; }
+.pb-sat { background: #2d1b69; color: #a78bfa; }
+
+/* ── Checklist section ── */
+.progress-section { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px 24px; margin-bottom: 32px; }
+.progress-section h3 { color: #94a3b8; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+.checklist-item { display: flex; align-items: center; gap: 10px; padding: 6px 0; cursor: pointer; }
+.checklist-item input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; accent-color: #38bdf8; }
+.checklist-item label { color: #cbd5e1; font-size: 0.9rem; cursor: pointer; }
+.checklist-item.done label { text-decoration: line-through; color: #475569; }

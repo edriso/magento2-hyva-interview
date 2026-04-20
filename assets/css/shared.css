@@ -1,0 +1,44 @@
+/* ── Reset ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.7; }
+
+/* ── Nav ── */
+nav { background: #1e293b; border-bottom: 1px solid #334155; padding: 12px 24px; position: sticky; top: 0; z-index: 100; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+nav .logo { color: #f1f5f9; font-size: 13px; font-weight: 700; margin-right: 8px; }
+nav a { color: #64748b; text-decoration: none; font-size: 12px; padding: 4px 10px; border-radius: 20px; border: 1px solid #334155; transition: all 0.2s; }
+nav a:hover, nav a.active { background: #334155; color: #e2e8f0; }
+nav .sep { color: #334155; }
+
+/* ── Layout ── */
+.container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+
+/* ── Hero ── */
+.hero { text-align: center; padding: 48px 0 40px; }
+.hero p { color: #94a3b8; margin-top: 12px; font-size: 1.05rem; }
+
+/* ── Code ── */
+pre, code { font-family: 'Fira Code', 'Cascadia Code', monospace; }
+pre { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 16px; overflow-x: auto; font-size: 0.8rem; color: #a5f3fc; margin: 12px 0; line-height: 1.6; }
+code { background: #0f172a; color: #a5f3fc; padding: 1px 6px; border-radius: 4px; font-size: 0.85em; }
+
+/* ── Diagram ── */
+.diagram { background: #0f172a; border: 1px solid #334155; border-radius: 10px; padding: 16px 20px; margin: 12px 0; font-family: monospace; font-size: 0.82rem; color: #7dd3fc; white-space: pre; overflow-x: auto; line-height: 1.6; }
+
+/* ── Callout boxes ── */
+.tip { background: #0c2a0c; border-left: 3px solid #4ade80; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+.tip p { color: #86efac; font-size: 0.88rem; }
+.tip strong { color: #4ade80; }
+.warn { background: #2d1a00; border-left: 3px solid #fb923c; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+.warn p { color: #fdba74; font-size: 0.88rem; }
+.info { background: #0c1f3a; border-left: 3px solid #38bdf8; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+.info p { color: #7dd3fc; font-size: 0.88rem; }
+
+/* ── Table ── */
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+th { background: #0f172a; color: #64748b; padding: 10px 14px; text-align: left; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #334155; }
+td { padding: 10px 14px; color: #cbd5e1; border-bottom: 1px solid #1e293b; vertical-align: top; }
+tr:hover td { background: #1a2540; }
+
+/* ── Grid ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 620px) { .grid-2 { grid-template-columns: 1fr; } }

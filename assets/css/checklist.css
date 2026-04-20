@@ -1,0 +1,58 @@
+/* ── Hero ── */
+.hero { padding: 40px 0 32px; }
+.hero h1 { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, #4ade80, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ── Topic body text defaults ── */
+h4 { color: #38bdf8; font-size: 0.88rem; font-weight: 700; margin: 16px 0 8px; text-transform: uppercase; letter-spacing: 0.4px; }
+p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 8px; }
+p strong { color: #cbd5e1; }
+ul, ol { padding-left: 20px; margin-bottom: 10px; }
+li { color: #94a3b8; font-size: 0.9rem; margin-bottom: 5px; }
+li strong { color: #cbd5e1; }
+
+/* ── Topic accordion ── */
+.topic { background: #1e293b; border: 1px solid #334155; border-radius: 14px; margin-bottom: 20px; overflow: hidden; }
+.topic-header { padding: 18px 22px; cursor: pointer; display: flex; align-items: flex-start; gap: 14px; transition: background 0.15s; }
+.topic-header:hover { background: #263548; }
+.topic-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+.topic-title { flex: 1; }
+.topic-title h3 { font-size: 0.97rem; font-weight: 700; color: #f1f5f9; }
+.topic-title p { font-size: 0.8rem; color: #64748b; margin-top: 2px; }
+.topic-status { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.done-btn { background: transparent; border: 1px solid #334155; color: #64748b; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; cursor: pointer; transition: all 0.2s; }
+.done-btn:hover { border-color: #4ade80; color: #4ade80; }
+.topic.checked .done-btn { background: #0c2a0c; border-color: #4ade80; color: #4ade80; }
+.topic.checked .topic-title h3 { color: #475569; }
+.chevron { color: #475569; font-size: 11px; padding-top: 1px; transition: transform 0.2s; }
+.topic.open .chevron { transform: rotate(180deg); }
+.topic-body { display: none; padding: 0 22px 20px; border-top: 1px solid #263548; }
+.topic.open .topic-body { display: block; }
+
+/* ── Say box ── */
+.say { background: #1a1a2e; border-left: 3px solid #a78bfa; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+.say-label { font-size: 10px; font-weight: 800; color: #a78bfa; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.say p { color: #c4b5fd; font-size: 0.88rem; font-style: italic; margin: 0; }
+
+/* ── Progress bar ── */
+.progress-bar-wrap { background: #0f172a; border: 1px solid #334155; border-radius: 12px; padding: 16px 20px; margin-bottom: 28px; }
+.progress-bar-wrap p { color: #64748b; font-size: 0.8rem; margin-bottom: 8px; }
+.bar-bg { background: #1e293b; border-radius: 99px; height: 8px; }
+.bar-fill { background: linear-gradient(90deg, #4ade80, #38bdf8); height: 8px; border-radius: 99px; transition: width 0.4s ease; }
+.bar-label { color: #94a3b8; font-size: 0.82rem; margin-top: 6px; }
+
+/* ── Topic number color themes ── */
+.n1  .topic-num { background: #1e3a5f; color: #38bdf8; }
+.n2  .topic-num { background: #2d1b69; color: #a78bfa; }
+.n3  .topic-num { background: #1a2e1a; color: #4ade80; }
+.n4  .topic-num { background: #2d1a1a; color: #fb923c; }
+.n5  .topic-num { background: #1a2d2d; color: #2dd4bf; }
+.n6  .topic-num { background: #2d1b69; color: #e879f9; }
+.n7  .topic-num { background: #2d1a1a; color: #f97316; }
+.n8  .topic-num { background: #1e3a5f; color: #60a5fa; }
+.n9  .topic-num { background: #1a2d2d; color: #34d399; }
+.n10 .topic-num { background: #2a1f0a; color: #fbbf24; }
+.n11 .topic-num { background: #2d1a1a; color: #f87171; }
+.n12 .topic-num { background: #1a2e1a; color: #86efac; }
+.n13 .topic-num { background: #1e3a5f; color: #93c5fd; }
+.n14 .topic-num { background: #2d1b69; color: #c4b5fd; }
+.n15 .topic-num { background: #0c2a0c; color: #4ade80; }
