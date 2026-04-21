@@ -18,11 +18,11 @@ nav .sep { color: #334155; }
 
 /* ── Code ── */
 pre, code { font-family: 'Fira Code', 'Cascadia Code', monospace; }
-pre { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 16px; overflow-x: auto; font-size: 0.8rem; color: #a5f3fc; margin: 12px 0; line-height: 1.6; }
-code { background: #0f172a; color: #a5f3fc; padding: 1px 6px; border-radius: 4px; font-size: 0.85em; }
+pre { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 16px; overflow-x: auto; font-size: 0.8rem; color: #a5f3fc; margin: 12px 0; line-height: 1.6; max-width: 100%; }
+code { background: #0f172a; color: #a5f3fc; padding: 1px 6px; border-radius: 4px; font-size: 0.85em; word-break: break-all; }
 
 /* ── Diagram ── */
-.diagram { background: #0f172a; border: 1px solid #334155; border-radius: 10px; padding: 16px 20px; margin: 12px 0; font-family: monospace; font-size: 0.82rem; color: #7dd3fc; white-space: pre; overflow-x: auto; line-height: 1.6; }
+.diagram { background: #0f172a; border: 1px solid #334155; border-radius: 10px; padding: 16px 20px; margin: 12px 0; font-family: monospace; font-size: 0.82rem; color: #7dd3fc; white-space: pre; overflow-x: auto; line-height: 1.6; max-width: 100%; }
 
 /* ── Callout boxes ── */
 .tip { background: #0c2a0c; border-left: 3px solid #4ade80; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
@@ -41,4 +41,5 @@ tr:hover td { background: #1a2540; }
 
 /* ── Grid ── */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-2 > * { min-width: 0; }
 @media (max-width: 620px) { .grid-2 { grid-template-columns: 1fr; } }
