@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Quiz — Interview Prep</title>
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <link rel="stylesheet" href="assets/css/quiz.css">
+</head>
+<body>
+
+<nav>
+  <span class="logo">📚 Interview Prep</span>
+  <a href="index.html">Main Guide</a>
+  <a href="checklist.html">✅ Checklist</a>
+  <a href="quiz.html" class="active">🧪 Practice Quiz</a>
+</nav>
+
+<div class="container">
+
+  <div class="hero">
+    <h1>Practice Quiz</h1>
+    <p>55 questions across 7 topics — test yourself before the interview</p>
+    <div class="hero-badges">
+      <span class="badge">Magento Core</span>
+      <span class="badge">Hyvä Theme</span>
+      <span class="badge">B2B / B2C</span>
+      <span class="badge">Security</span>
+      <span class="badge">GCP &amp; Cloudflare</span>
+    </div>
+  </div>
+
+  <!-- ===== START SCREEN ===== -->
+  <div id="start-screen">
+    <div class="start-label">Pick a topic — or start with everything</div>
+    <div class="cat-grid" id="cat-grid"></div>
+    <div class="start-footer">
+      <div class="start-info" id="start-info">All 55 questions — shuffled every time</div>
+      <button class="btn-start" onclick="startQuiz()">Start Quiz →</button>
+    </div>
+  </div>
+
+  <!-- ===== QUIZ SCREEN ===== -->
+  <div id="quiz-screen" style="display:none">
+    <div class="qz-top">
+      <div class="qz-progress-wrap">
+        <div class="qz-progress-fill" id="qz-bar" style="width:0%"></div>
+      </div>
+      <div class="qz-meta">
+        <span class="qz-badge" id="qz-badge"></span>
+        <span class="qz-counter" id="qz-counter"></span>
+      </div>
+    </div>
+    <div class="qz-card">
+      <div class="qz-question" id="qz-question"></div>
+      <div class="qz-options" id="qz-options"></div>
+      <div class="qz-explain" id="qz-explain" style="display:none"></div>
+    </div>
+    <div class="qz-nav">
+      <div class="qz-score-live" id="qz-score-live"></div>
+      <button class="btn-next" id="btn-next" style="display:none" onclick="nextQuestion()">Next →</button>
+    </div>
+    <div class="kbd-hint">
+      Press <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> to pick an answer &nbsp;·&nbsp; <kbd>Enter</kbd> or <kbd>→</kbd> to advance
+    </div>
+  </div>
+
+  <!-- ===== RESULT SCREEN ===== -->
+  <div id="result-screen" style="display:none">
+    <div class="res-hero">
+      <div class="res-score-wrap">
+        <div class="res-score-num" id="res-score-num"></div>
+        <div class="res-score-sub">correct out of <span id="res-total"></span></div>
+      </div>
+      <div class="res-pct" id="res-pct"></div>
+      <div class="res-msg" id="res-msg"></div>
+    </div>
+    <div class="res-breakdown" id="res-breakdown"></div>
+    <div class="res-actions">
+      <button class="btn-secondary" onclick="goToStart()">← Try Another Category</button>
+      <button class="btn-primary" id="btn-retry" onclick="retryWrong()" style="display:none">Retry Wrong Answers</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>
