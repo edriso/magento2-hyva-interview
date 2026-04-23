@@ -797,6 +797,51 @@ Your file:  app/design/frontend/Vendor/Theme/
 
     <div class="qa">
       <div class="qa-q" onclick="toggleQA(this)">
+        <span class="qa-q-text">How do you approach setting up a new project from scratch?</span>
+        <div style="display:flex; gap: 8px; align-items: center;">
+          <span class="qa-q-tag tag-hyva">HYVÄ</span>
+          <span class="qa-arrow">▼</span>
+        </div>
+      </div>
+      <div class="qa-a">
+        <div class="answer-label">Your honest, confident answer</div>
+        <p>"I start by establishing the design foundation — before writing any feature code. On Sports Group Denmark, the first sprint was entirely about getting the theme right: I set up the Tailwind config with the client's brand colors, typography scale, and custom breakpoints, then built a <code>/style_guide</code> page so the whole team could see and verify every token — colors, headings, buttons, form fields — in one place."</p>
+        <p style="margin-top: 8px"><strong>What that first sprint covered:</strong></p>
+        <ul>
+          <li>Brand color palette in <code>tailwind.config.js</code> — primary, secondary, greys, status colors — all as named tokens</li>
+          <li>Font families registered and custom <code>fontSize</code> scale (h1–h4 with line-height and weight baked in)</li>
+          <li>Responsive container and breakpoints tuned to the design system</li>
+          <li><code>Scandiweb_StyleGuide</code> module wired up to render a live <code>/style_guide</code> route for design QA</li>
+        </ul>
+        <div class="tip"><p>"Getting tokens right at the start means every component you build afterwards is consistent. It's much cheaper than fixing design drift late in a project."</p></div>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q" onclick="toggleQA(this)">
+        <span class="qa-q-text">Tell me about the hardest technical challenge you've faced.</span>
+        <div style="display:flex; gap: 8px; align-items: center;">
+          <span class="qa-q-tag tag-technical">TECHNICAL</span>
+          <span class="qa-arrow">▼</span>
+        </div>
+      </div>
+      <div class="qa-a">
+        <div class="answer-label">Your honest, confident answer</div>
+        <p>"The Algolia search integration on Gemoss. The challenge wasn't just installing the module — it was making it behave correctly inside a Hyvä theme where the search bar is always visible (no toggle button), while keeping CSP compliant and not breaking the autocomplete initialization flow."</p>
+        <p style="margin-top: 8px"><strong>Why it was hard:</strong></p>
+        <ul>
+          <li>The <code>Hyva_AlgoliaSearch</code> module assumes a specific search toggle pattern — Gemoss's design didn't have one</li>
+          <li>Had to override <code>algolia-form.phtml</code> to safely merge <code>window.algoliaConfig</code> without clobbering values set by <code>configuration.phtml</code></li>
+          <li>Autocomplete scripts load asynchronously — had to guard against double-initialization with a flag</li>
+          <li>Everything runs inline in Hyvä, so inline scripts needed to be registered with <code>HyvaCsp</code></li>
+        </ul>
+        <p style="margin-top: 8px"><strong>How I solved it:</strong> I traced the full script loading order, identified where configs were being set and overwritten, and rewrote the form template to merge configs cleanly and only initialize autocomplete once — either on page load (always-visible case) or on icon click (toggle case).</p>
+        <div class="tip"><p>"That ticket taught me to always read the source of a third-party Hyvä-compatible module before touching its templates — the initialization logic is rarely obvious from the outside."</p></div>
+      </div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q" onclick="toggleQA(this)">
         <span class="qa-q-text">What's your expected salary? (If asked)</span>
         <div style="display:flex; gap: 8px; align-items: center;">
           <span class="qa-q-tag tag-general">GENERAL</span>
